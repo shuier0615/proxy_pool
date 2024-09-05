@@ -35,6 +35,15 @@ class ProxyHandler(object):
         """
         proxy = self.db.get(https)
         return Proxy.createFromJson(proxy) if proxy else None
+    def getip(self, https=False):
+        """
+        return a proxy
+        Args:
+            https: True/False
+        Returns:
+        """
+        proxy = self.db.get(https)
+        return Proxy.createFromJson(proxy) if proxy else None
 
     def pop(self, https):
         """
